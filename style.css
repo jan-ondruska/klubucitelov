@@ -1,0 +1,179 @@
+/* Klub učiteľov – spoločný vzhľad všetkých stránok */
+:root {
+  --ink: #1b2430;
+  --muted: #5a6573;
+  --bg: #f7f8fa;
+  --card: #ffffff;
+  --line: #e3e7ec;
+  --brand: #1d4e89;
+  --brand-dark: #153a66;
+  --accent: #e8a33d;
+  --radius: 10px;
+  --max: 1040px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+a { color: var(--brand); }
+a:hover { color: var(--brand-dark); }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* Hlavička a menu */
+.site-header {
+  background: var(--brand);
+  color: #fff;
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: .2px;
+}
+.logo:hover { color: #fff; }
+.logo span { color: var(--accent); }
+
+.nav { display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.nav a {
+  display: block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: .95rem;
+}
+.nav a:hover { background: rgba(255,255,255,.12); color: #fff; }
+.nav a[aria-current="page"] { background: rgba(255,255,255,.2); }
+
+/* Úvodný pás */
+.hero {
+  background: linear-gradient(135deg, var(--brand) 0%, #2c6cb3 100%);
+  color: #fff;
+  padding: 56px 0 64px;
+}
+.hero h1 { margin: 0 0 12px; font-size: 2.3rem; line-height: 1.2; }
+.hero p { margin: 0; max-width: 680px; font-size: 1.15rem; opacity: .95; }
+.hero .btn { margin-top: 24px; }
+
+.page-title {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  padding: 32px 0 24px;
+}
+.page-title h1 { margin: 0; font-size: 1.9rem; }
+.page-title p { margin: 6px 0 0; color: var(--muted); }
+
+main { padding: 36px 0 56px; }
+
+section { margin-bottom: 40px; }
+h2 { font-size: 1.4rem; margin: 0 0 14px; }
+h3 { font-size: 1.1rem; margin: 0 0 6px; }
+
+/* Tlačidlá */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #1b2430;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn:hover { background: #f0b558; color: #1b2430; }
+
+/* Karty */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.card p { margin: 0; color: var(--muted); }
+a.card { display: block; text-decoration: none; color: inherit; transition: border-color .15s, box-shadow .15s; }
+a.card:hover { border-color: var(--brand); box-shadow: 0 4px 14px rgba(29,78,137,.10); color: inherit; }
+a.card h3 { color: var(--brand); }
+.card .more { display: inline-block; margin-top: 10px; font-weight: 600; color: var(--brand); }
+
+/* Zoznamy noviniek a podujatí */
+.list { list-style: none; margin: 0; padding: 0; }
+.list li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 10px;
+}
+.date {
+  display: inline-block;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--brand);
+  background: #e8eef7;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.note {
+  background: #fff8ec;
+  border-left: 4px solid var(--accent);
+  padding: 12px 16px;
+  border-radius: 6px;
+  color: #5b4520;
+  font-size: .95rem;
+}
+
+/* Text na doplnenie – zvýraznený, aby sa nezabudol */
+.todo {
+  background: #fff3c4;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+dl.info { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; }
+dl.info dt { font-weight: 600; }
+dl.info dd { margin: 0; }
+
+/* Pätička */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+.site-footer p { margin: 4px 0; }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .hero { padding: 40px 0 44px; }
+  .hero h1 { font-size: 1.8rem; }
+  dl.info { grid-template-columns: 1fr; }
+  dl.info dd { margin-bottom: 8px; }
+}
