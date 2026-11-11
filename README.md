@@ -2,22 +2,19 @@
 
 Statický web projektu KEGA 033UKF-4/2026, zverejnený cez GitHub Pages.
 
-## Súbory
+## Štruktúra
 
-| Súbor | Stránka |
+| Priečinok / súbor | Obsah |
 |---|---|
-| `index.html` | Úvod a novinky |
-| `o-projekte.html` | O projekte, ciele, tím a harmonogram |
-| `ponuka.html` | Čo ponúkame, vzdelávacie cykly, výpožička sád |
-| `materialy.html` | Materiály na stiahnutie (odkazy na OneDrive) |
-| `podujatia.html` | Stretnutia, semináre a konferencia |
-| `kontakt.html` | Kontakt |
-| `ochrana-sukromia.html` | Cookies a ochrana súkromia |
+| `index.html`, `o-projekte.html`, `ponuka.html`, `materialy.html`, `podujatia.html`, `kontakt.html`, `ochrana-sukromia.html` | Hlavné stránky webu |
+| `clanky/` | Články a novinky (napr. `clanky/stem-v-akcii-2026.html`) |
+| `css/style.css` | Spoločný vzhľad všetkých stránok |
+| `js/menu.js` | Mobilné menu |
+| `fonts/` | Písmo loga Space Grotesk (licencia SIL OFL v `fonts/OFL.txt`) |
+| `img/logo/` | Znak klubu na svetlý / tmavý podklad |
+| `img/clanky/<názov-článku>/` | Fotografie k jednotlivým článkom |
+| `favicon.ico`, `favicon.svg`, `apple-touch-icon.png` | Ikona webu (musí zostať v koreni) |
 | `CNAME` | Vlastná doména klubucitelov.sk – **nemazať** |
-| `style.css` | Spoločný vzhľad všetkých stránok |
-| `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | Ikona webu |
-| `logo-znak.svg`, `logo-znak-biely.svg` | Znak klubu na svetlý / tmavý podklad |
-| `space-grotesk-*.woff2` | Písmo loga (licencia SIL OFL, `space-grotesk-OFL.txt`) |
 
 ## Ako upraviť text
 
@@ -32,3 +29,9 @@ Text v hranatých zátvorkách `[ ... ]` (na webe zvýraznený žltou) treba dop
 
 V `materialy.html` skopírujte jeden blok `<a class="card" ...> ... </a>`,
 do `href="..."` vložte odkaz na zdieľaný priečinok OneDrive a prepíšte názov a popis.
+
+## Nový článok
+
+1. Fotky nahrajte do nového priečinka `img/clanky/<názov-článku>/`.
+2. Skopírujte `clanky/stem-v-akcii-2026.html` pod novým názvom a prepíšte text a cesty k fotkám.
+3. Na úvodnej stránke (`index.html`) pridajte odkaz do časti Novinky.

@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#1d4e89">
   <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -108,16 +108,6 @@
   </div>
 </footer>
 
-<script>
-(function () {
-  var btn = document.querySelector(".menu-toggle");
-  var nav = document.getElementById("hlavne-menu");
-  btn.addEventListener("click", function () {
-    var open = btn.getAttribute("aria-expanded") === "true";
-    btn.setAttribute("aria-expanded", String(!open));
-    nav.classList.toggle("open", !open);
-  });
-})();
-</script>
+<script src="js/menu.js"></script>
 </body>
 </html>
