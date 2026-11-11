@@ -198,6 +198,24 @@ a.card h3 { color: var(--brand); }
   padding: 0 3px;
 }
 
+/* Článok */
+.article { max-width: 760px; }
+.article h2 { margin-top: 36px; }
+.article .card h2 { margin-top: 0; }
+.article h3 { margin-top: 24px; font-size: 1.15rem; }
+.article-meta { color: var(--muted); margin: 0 0 16px; }
+.article-meta .date { margin: 0 6px 0 0; }
+.lead { font-size: 1.15rem; }
+.byline { color: var(--muted); font-size: .95rem; margin: -2px 0 6px; }
+.photo { margin: 24px 0; }
+.photo img { display: block; width: auto; max-width: 100%; max-height: 560px; height: auto; border-radius: var(--radius); }
+.gallery .photo img { width: 100%; max-height: none; }
+.photo figcaption { margin-top: 8px; color: var(--muted); font-size: .9rem; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; align-items: start; }
+.gallery .photo { margin: 0; }
+.list h3 a { color: inherit; text-decoration: none; }
+.list h3 a:hover { color: var(--brand); text-decoration: underline; }
+
 dl.info { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; }
 dl.info dt { font-weight: 600; }
 dl.info dd { margin: 0; }
