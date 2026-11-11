@@ -1,4 +1,18 @@
 /* Klub učiteľov – spoločný vzhľad všetkých stránok */
+@font-face {
+  font-family: "Space Grotesk";
+  font-weight: 600;
+  font-display: swap;
+  src: url("space-grotesk-latin-ext-600.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  font-weight: 600;
+  font-display: swap;
+  src: url("space-grotesk-latin-600.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 :root {
   --ink: #1b2430;
   --muted: #5a6573;
@@ -45,14 +59,42 @@ a:hover { color: var(--brand-dark); }
   padding-bottom: 14px;
 }
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: #fff;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: .2px;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: -.2px;
 }
 .logo:hover { color: #fff; }
-.logo span { color: var(--accent); }
+.logo svg { width: 28px; height: 40px; flex-shrink: 0; }
+.logo .accent { color: var(--accent); }
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 11px 10px;
+  background: none;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.menu-toggle:hover, .menu-toggle:focus-visible { background: rgba(255,255,255,.12); }
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  margin: 5px 0;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .nav { display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; }
 .nav a {
@@ -169,6 +211,13 @@ dl.info dd { margin: 0; }
   font-size: .9rem;
 }
 .site-footer p { margin: 4px 0; }
+
+@media (max-width: 820px) {
+  .menu-toggle { display: block; }
+  .js .nav { display: none; width: 100%; flex-direction: column; gap: 2px; padding-bottom: 8px; }
+  .js .nav.open { display: flex; }
+  .js .nav a { padding: 11px 12px; font-size: 1rem; }
+}
 
 @media (max-width: 640px) {
   body { font-size: 16px; }

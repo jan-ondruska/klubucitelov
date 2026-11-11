@@ -15,6 +15,9 @@ Statický web projektu KEGA 033UKF-4/2026, zverejnený cez GitHub Pages.
 | `ochrana-sukromia.html` | Cookies a ochrana súkromia |
 | `CNAME` | Vlastná doména klubucitelov.sk – **nemazať** |
 | `style.css` | Spoločný vzhľad všetkých stránok |
+| `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | Ikona webu |
+| `logo-znak.svg`, `logo-znak-biely.svg` | Znak klubu na svetlý / tmavý podklad |
+| `space-grotesk-*.woff2` | Písmo loga (licencia SIL OFL, `space-grotesk-OFL.txt`) |
 
 ## Ako upraviť text
 
