@@ -34,4 +34,4 @@ do `href="..."` vložte odkaz na zdieľaný priečinok OneDrive a prepíšte ná
 
 1. Fotky nahrajte do nového priečinka `img/clanky/<názov-článku>/`.
 2. Skopírujte `clanky/stem-v-akcii-2026.html` pod novým názvom a prepíšte text a cesty k fotkám.
-3. Na úvodnej stránke (`index.html`) pridajte odkaz do časti Novinky.
+3. Na úvodnej stránke (`index.html`) pridajte odkaz do časti Novinky – **vždy navrch**, novinky sú zoradené od najnovších.
